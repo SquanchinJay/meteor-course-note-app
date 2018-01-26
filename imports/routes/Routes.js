@@ -15,7 +15,8 @@ export const routes = (
     <Switch>
       <Route exact path='/' component={Login} />
       <Route path='/signup' component={Signup} />
-      <Route path='/dashboard' component={Dashboard} />
+      <Route exact path='/dashboard' component={Dashboard} />
+      <Route path='/dashboard/:id' component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
   </Router>
