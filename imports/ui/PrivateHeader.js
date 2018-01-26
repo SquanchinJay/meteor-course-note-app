@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import PropTypes from 'prop-types';
 import { createContainer } from 'meteor/react-meteor-data';
@@ -20,7 +21,8 @@ PrivateHeader.propTypes = {
 export default createContainer(() => {
   return {
     handleLogout: () => {
-      Accounts.logout();
+      Meteor.logout();
+      console.log('this func ran');
     }
   }
 }, PrivateHeader);

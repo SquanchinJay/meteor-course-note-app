@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { PrivateHeader } from './PrivateHeader';
+import PrivateHeader from './PrivateHeader';
 import NoteList from './NoteList';
 
 export default class Dashboard extends React.Component {
 
   componentWillMount() {
     if (!Meteor.userId()) {
-      this.props.history.replace('/')
+      this.props.history.replace('/');
     }
   }
 

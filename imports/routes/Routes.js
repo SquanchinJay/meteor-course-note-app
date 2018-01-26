@@ -7,9 +7,6 @@ import Dashboard from '../ui/Dashboard';
 import NotFound from '../ui/NotFound';
 import Login from '../ui/Login';
 
-const unauthenticatedPages = ['/', '/signup'];
-const authenticatedPages = ['/dashboard'];
-
 export const routes = (
   <Router history={history}>
     <Switch>
@@ -23,6 +20,9 @@ export const routes = (
 )
 
 export const onAuthChange = (isAuthenticated) => {
+  const unauthenticatedPages = ['/', '/signup'];
+  const authenticatedPages = ['/dashboard'];
+
   const pathname = history.location.pathname;
   const isUnauthenticatedPage = unauthenticatedPages.includes(pathname);
   const isAuthenticatedPage = authenticatedPages.includes(pathname);
