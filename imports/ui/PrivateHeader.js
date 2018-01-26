@@ -22,7 +22,6 @@ export default createContainer(() => {
   return {
     handleLogout: () => {
       Meteor.logout();
-      console.log('this func ran');
     }
   }
 }, PrivateHeader);
